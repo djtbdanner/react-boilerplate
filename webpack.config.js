@@ -7,6 +7,9 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias:{
+      Greeter: 'public/components/Greeter.jxt',
+      GreeterMessage: 'public/components/GreeterMessage.jsx',
+      GreeterForm: 'public/components/GreeterForm'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -15,7 +18,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
         excude: /(node_modules|bower_components)/
